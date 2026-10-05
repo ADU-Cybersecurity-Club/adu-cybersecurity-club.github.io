@@ -12,8 +12,6 @@ This site is where we post what we work on: CTF write-ups, notes from our sessio
 
 Any member can write a post. A post is one Markdown file in the `_posts` folder of [our GitHub repo](https://github.com/ADU-Cybersecurity-Club/adu-cybersecurity-club.github.io). You send it as a pull request, and once it is merged the site rebuilds by itself.
 
-The full steps are in [How to publish a post on this site](/posts/how-to-publish-a-post/).
-
 ## Find us
 
 - GitHub: [ADU-Cybersecurity-Club](https://github.com/ADU-Cybersecurity-Club)

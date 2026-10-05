@@ -6,7 +6,7 @@ It is a [Jekyll](https://jekyllrb.com) site using the [Chirpy](https://github.co
 
 ## Write a post
 
-Add one Markdown file to `_posts/`, named `YYYY-MM-DD-short-name.md`, and open a pull request. The full guide is on the site: [How to publish a post on this site](https://adu-cybersecurity-club.github.io/posts/how-to-publish-a-post/).
+Add one Markdown file to `_posts/`, named `YYYY-MM-DD-short-name.md`, and open a pull request.
 
 ## Run it locally
 
