@@ -1,39 +1,39 @@
-# Chirpy Starter
+# ADU Cybersecurity Club
 
-[![Gem Version](https://img.shields.io/gem/v/jekyll-theme-chirpy)][gem]&nbsp;
-[![GitHub license](https://img.shields.io/github/license/cotes2020/chirpy-starter.svg?color=blue)][mit]
+The website of the ADU Cybersecurity Club: <https://adu-cybersecurity-club.github.io>
 
-A minimal, ready-to-use template for creating a blog with the [**Chirpy**][chirpy] Jekyll theme. Get up and running in minutes with all critical files pre-configured.
+It is a [Jekyll](https://jekyllrb.com) site using the [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy) theme. Every push to `main` builds and publishes the site through GitHub Actions (`.github/workflows/pages-deploy.yml`).
 
-## Why This Starter Exists
+## Write a post
 
-When installing Chirpy through [RubyGems.org][gem], Jekyll can only read a subset of theme files (`_data`, `_layouts`, `_includes`, `_sass`, `assets`) and limited `_config.yml` options from the gem. As a result, users cannot enjoy the full out-of-the-box experience that Chirpy offers.
+Add one Markdown file to `_posts/`, named `YYYY-MM-DD-short-name.md`, and open a pull request. The full guide is on the site: [How to publish a post on this site](https://adu-cybersecurity-club.github.io/posts/how-to-publish-a-post/).
 
-To unlock all features, the following files must be present in your Jekyll site:
+## Run it locally
 
-```shell
-.
-├── _config.yml
-├── _plugins
-├── _tabs
-└── index.html
+```bash
+bundle install
+bundle exec jekyll serve
 ```
 
-This starter bundles those files from the latest **Chirpy** release along with a [CD][CD] workflow, so you can start writing immediately.
+Then open <http://127.0.0.1:4000>.
 
-## Usage
+To run the same check the deploy runs:
 
-Check out the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy/wiki).
+```bash
+JEKYLL_ENV=production bundle exec jekyll b
+bundle exec htmlproofer _site --disable-external \
+  --ignore-urls "/^http:\/\/127.0.0.1/,/^http:\/\/0.0.0.0/,/^http:\/\/localhost/"
+```
 
-## Contributing
+## Where things are
 
-This repository is automatically updated with new releases from the theme repository. If you encounter any issues or want to contribute to its improvement, please visit the [theme repository][chirpy] to provide feedback.
+| Path | What it is |
+|---|---|
+| `_config.yml` | Site name, tagline, links, avatar |
+| `_posts/` | Posts, one file each |
+| `_tabs/about.md` | The About page |
+| `assets/img/` | Logo, favicons and post images |
 
 ## License
 
-This work is published under [MIT][mit] License.
-
-[gem]: https://rubygems.org/gems/jekyll-theme-chirpy
-[chirpy]: https://github.com/cotes2020/jekyll-theme-chirpy/
-[CD]: https://en.wikipedia.org/wiki/Continuous_deployment
-[mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
+The theme files come from [chirpy-starter](https://github.com/cotes2020/chirpy-starter) under the MIT license (see `LICENSE`).
